@@ -12,7 +12,4 @@
   }
 </script>
 <style lang="scss">
-  #app {
-    margin:.1rem;
-  }
 </style>
