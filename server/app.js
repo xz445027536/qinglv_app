@@ -2,6 +2,7 @@
 const express=require("express");
 //引入中间件body-parser
 const bodyParser=require("body-parser");
+const router = require('./router.js')
 //引入用户路由器
 //const userRouter=require("./routes/user")
 //创建web服务器
@@ -12,10 +13,11 @@ app.use(cors({
   credentials:true
 }))
 //设置监听端口
-app.listen(3000);
+app.listen(3300);
 //设置托管静态页面到public目录下
 //app.use(express.static("public"));
 //使用body-paeser中间件
 app.use(bodyParser.urlencoded({
   extended:false
 }));
+app.use('/index',router)

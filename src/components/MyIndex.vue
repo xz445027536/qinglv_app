@@ -17,9 +17,4 @@
 </script>
 
 <style lang="scss">
-  .index{
-    .swiper{
-      margin-top: .1rem;
-    }
-  }
 </style>
