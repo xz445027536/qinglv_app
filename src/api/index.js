@@ -5,7 +5,8 @@ axios.interceptors.response.use(function (response) {
 }, function (error) {
   return Promise.reject(error);
 });
-//
-export let getDta=()=>{
-  return axios.get('')
+//请求city组件的数据接口
+export let getCities=()=>{
+  return axios.get('/mock/city.json')
 }
+

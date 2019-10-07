@@ -11,12 +11,21 @@
 export default {
   data(){
     return{
+      swiper:[],
       imgs:[
-        {img_url:require('../assets/images/swiper_01.jpg')},
-        {img_url:require('../assets/images/swiper_02.jpg')},
-        {img_url:require('../assets/images/swiper_03.jpg')},
-        {img_url:require('../assets/images/swiper_04.jpg')}
+        {img_url:require('../../assets/images/swiper_01.jpg')},
+        {img_url:require('../../assets/images/swiper_02.jpg')},
+        {img_url:require('../../assets/images/swiper_03.jpg')},
+        {img_url:require('../../assets/images/swiper_04.jpg')}
       ]
+    }
+  },
+  created(){
+    this.getData();
+  },
+  methods:{
+    getData(){
+      this.axios.get('/swiper').then(res=>{console.log(res)}).catch()
     }
   }
 }
