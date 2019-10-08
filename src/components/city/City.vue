@@ -1,8 +1,9 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <city-search :cities="cities"></city-search>
-    <city-list></city-list>
+    <!-- <city-search :cities="cities"></city-search> -->
+    <city-list :hotCities="hotCities" :cities="cities"></city-list>
+    <city-alphabet :cities="cities"></city-alphabet>
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { getCities } from "@/api";
 import CityHeader from "./base/Header";
 import CitySearch from "./base/Search";
 import CityList from "./base/list"
+import CityAlphabet from './base/Alphabet'
 export default {
   data(){
     return{
@@ -18,15 +20,15 @@ export default {
       cities:[]
     }
   },
-  components:{CityHeader,CitySearch,CityList},
+  components:{CityHeader,CitySearch,CityList,CityAlphabet},
   created(){
     this.getData()
   },
   methods:{
     async getData(){
       let {hotCities,cities}=await getCities();
-      this.hotCities=hotCities
-      this.cities=cities
+      this.hotCities=hotCities;
+      this.cities=cities;
     }
   }
 }

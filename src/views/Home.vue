@@ -2,7 +2,7 @@
   <div class="home">
     <mt-tab-container v-model="active">
       <mt-tab-container-item id="index">
-        <my-index></my-index>
+        <index></index>
       </mt-tab-container-item>
       <!-- <mt-tab-container-item id="scenic">景点</mt-tab-container-item>
       <mt-tab-container-item id="hotel">酒店</mt-tab-container-item> -->
@@ -32,14 +32,14 @@
   </div>
 </template>
 <script>
-  import MyIndex from '../components/myindex/MyIndex'
+  import Index from '../components/index/Index'
   export default {
     data(){
       return {
         active:"index",
       }
     },
-    components:{MyIndex}
+    components:{Index}
   }
 </script>
 <style lang="scss">

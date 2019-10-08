@@ -11,6 +11,7 @@ Vue.use(MintUI)
 Vue.prototype.axios=axios
 Vue.prototype.qs=QS
 Vue.config.productionTip = false
+//axios.defaults.baseURL="http://127.0.0.1:3300"
 
 new Vue({
   router,

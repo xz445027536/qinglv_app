@@ -1,7 +1,7 @@
 <template>
   <div class="hot">
     <div class="hot-top">
-      <img class="hot-top-img" src="../../assets/images/hot.png" alt="">
+      <img class="hot-top-img" src="../../../assets/images/hot.png" alt="">
       <span class="hot-top-title">热门景点推荐</span>   
     </div>
     <div class="hop-con">
@@ -31,7 +31,7 @@
     data(){
       return{
         lists:[
-          {img_url:require('../../assets/images/jxzh.jpg'),title:"世界之窗",comment:"13571",price:"129"}
+          {img_url:require('../../../assets/images/jxzh.jpg'),title:"世界之窗",comment:"13571",price:"129"}
         ]
       }
     }

@@ -2,7 +2,7 @@
   <div class="search">
     <mt-search v-model="value" placeholder="输入城市名或拼音"></mt-search>
     <ul v-show="value">
-      <li v-for="(city,index) of filterCities" :key="index">{{city.name}}</li>
+      <li v-for="(city,id) of filterCities" :key="id" @click="handleClick(city.name)">{{city.name}}</li>
       <li v-show="isShow">未匹配到数据</li>
     </ul>
   </div>
@@ -31,6 +31,13 @@ export default {
     isShow(){
       return !this.filterCities.length;
     }
+  },
+  methods:{
+    handleClick(city){
+      //向仓库中存值
+      this.$store.commit("changeCity",city);
+      this.$router.push('/')
+    }
   }
 }
 </script>
@@ -49,6 +56,12 @@ export default {
         .mint-searchbar-cancel{
           display: none;
         }
+      }
+    }
+    ul{
+      li{
+        height: .4rem;
+        line-height: .4rem;
       }
     }
   }

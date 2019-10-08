@@ -23,4 +23,4 @@ app.use(bodyParser.urlencoded({
 
 //使用路由器
 app.use("/user",userRouter);
-app.use("/swiper",swiperRouter)
+app.use("/",swiperRouter)

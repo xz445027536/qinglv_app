@@ -24,7 +24,7 @@ CREATE TABLE swiper(
 );
 INSERT INTO swiper VALUE(0001,"https://source.qunarzz.com/site/images/wns/20190926_qunar_dujia_750x192_6_V1.jpg");
 INSERT INTO swiper VALUE(0002,"https://source.qunarzz.com/site/images/wns/20190924_dujia_homepage_top_banner_4.jpg");
-INSERT INTO swiper VALUE(0003,"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg");
-INSERT INTO swiper VALUE(0004,"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5cfb89bebe41028d9b6732bcbe959cd6.jpg_750x200_4eb23790.jpg");
-INSERT INTO swiper VALUE(0005,"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/fd8c3e553ad9196058853d015bd67d29.jpg_750x200_2c5b094a.jpg");
+INSERT INTO swiper VALUE(0003,"https://imgs.qunarzz.com/sight/source/1507/d9/2ddc7652fdba16.jpg_r_640x214_5e62f1a3.jpg");
+INSERT INTO swiper VALUE(0004,"https://imgs.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg");
+INSERT INTO swiper VALUE(0005,"http://img1.qunarzz.com/sight/p0/1503/f2/f226f4cef39d59fc.water.jpg_600x330_57e37091.jpg");
 #创建景点表
