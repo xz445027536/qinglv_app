@@ -4,8 +4,8 @@
       <mt-button icon="back"></mt-button>
     </router-link>
     <mt-search placeholder="请输入景点名称"></mt-search>
-    <router-link to="/city">
-      <span class="city-name">{{$store.state.city}}</span>
+    <router-link to="/city" class="city">
+      <span class="city-name">{{$store.state.city}}</span><i class="iconfont icon-jiantou"></i>
     </router-link>
     <!-- <mt-button @click="search">搜索</mt-button> -->
   </div>
@@ -54,11 +54,17 @@ export default {
       }
     }
   }
-  .city-name{
-    height: 100%;
-    padding: 0 0.1rem;
-    font-size: 0.3rem;
-    color: #fff;
+  .city{
+    padding: 0 .1rem;
+    .city-name{
+      height: 100%;
+      font-size: 0.3rem;
+      color: #fff;
+    }
+    .iconfont{
+      font-size:.24rem;
+      color: #fff;
+    }
   }
   .mint-button:not(.is-disabled):active::after{
     opacity: 0;

@@ -11,11 +11,12 @@
 <script>
 export default {
   props:["cities"],
-  handleClick(name){
-    //向仓库中存值
-    this.$store.commit("changeCity",name);
-    console.log(key)
-    this.$router.push('/')
+  methods:{
+    handleClick(city){
+      //向仓库中存值
+      this.$store.commit("changeCity",city);
+      this.$router.push('/')
+    }
   }
 }
 </script>

@@ -5,6 +5,7 @@ import store from './store'
 import axios from 'axios'
 import QS from 'qs'
 import './assets/css/reset.css'
+import './assets/css/iconfont.css'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)

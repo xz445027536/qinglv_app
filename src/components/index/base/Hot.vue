@@ -5,19 +5,20 @@
       <span class="hot-top-title">热门景点推荐</span>   
     </div>
     <div class="hop-con">
-      <div class="con-list" v-for="(item,index) of lists" :key="index">
-        <router-link to="">
-          <div class="con-top-img">
-            <img :src="item.img_url" alt="">
-          </div>
+      <div class="con-list" v-for="(item,index) of hotlist" :key="index">
+        <router-link class="item" :to="{name:'details',params:{id:item.id}}">
+          <img class="item-img" :src="item.imgUrl" alt="">
           <div class="con-top-con">
-            <div class="con-title" v-text="item.title">世界之窗</div>
+            <div class="con-title" v-text="item.title"></div>
             <div class="score_comment">
-              <span class="score">☆☆☆☆☆</span>
+              <i class="iconfont icon-star" v-for="(i,index) in 5" :key="index"></i>
               <span class="comment">{{item.comment}}条评论</span>
             </div>
             <div class="price">
-              ￥<em v-text="item.price"></em><span>起</span>
+              <div class="item-price">
+                ￥<span v-text="item.price"></span><i>起</i>
+              </div>
+              <div class="item-area" v-text="item.area"></div>
             </div>
           </div>
         </router-link>
@@ -28,11 +29,12 @@
 
 <script>
   export default {
-    data(){
-      return{
-        lists:[
-          {img_url:require('../../../assets/images/jxzh.jpg'),title:"世界之窗",comment:"13571",price:"129"}
-        ]
+    props:["hotlist"],
+    filters:{
+      star(score){
+        return{
+          width:score*100/5+"%"
+        }
       }
     }
   }
@@ -61,16 +63,14 @@
       .con-list{
         height: 2rem;
         padding:.2rem;
-        .router-link-exact-active{
-          height: 100%;
+        .item{
           display: flex;
-          .con-top-img{
-            height: 100%;
-            img{
-              height: 100%;
-            }
+          img.item-img{
+            width: 2rem;
+            height: 2rem;
           }
           .con-top-con{
+            flex: 1;
             padding-left: .2rem;
             .con-title{
               height: .44rem;
@@ -82,8 +82,9 @@
             .score_comment{
               height: .34rem;
               margin-top: .14rem;
-              .score{
-                color:#ffb436;
+              .icon-star{
+                font-size: .28rem;
+                color:#ff8300;
               }
               .comment{
                 margin-left: .1rem;
@@ -92,14 +93,23 @@
               }
             }
             .price{
-              margin-top: .18rem;
+              display: flex;
               height: .4rem;
+              margin-top: .18rem;
+              line-height: .4rem;
               font-size: .2rem;
               color: #ff8300;
-              em{
-                font-size: .4rem;
+              .item-price{
+                flex: 1;
+                span{
+                  font-size: .4rem;
+                }
+                i{
+                  color: #616161;
+                }
               }
-              span{
+              .item-area{
+                text-align: right;
                 color: #616161;
               }
             }
