@@ -26,6 +26,9 @@ export default {
       let {recommendList} = await getIndex();
       this.recommendList=recommendList;
     }
+  },
+  activated(){
+    this.getData();
   }
 };
 </script>

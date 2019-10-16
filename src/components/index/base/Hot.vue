@@ -60,6 +60,7 @@
       }
     }
     .hop-con{
+      margin-bottom:1.1rem ;
       .con-list{
         height: 2rem;
         padding:.2rem;

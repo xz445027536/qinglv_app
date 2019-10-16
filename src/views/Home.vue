@@ -43,5 +43,18 @@
   }
 </script>
 <style lang="scss">
-  
+  .home{
+    .mint-tabbar{
+      .mt-tab-item{
+        .mint-tab-item-icon{
+          width: .3rem;
+          height: .3rem;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
 </style>
