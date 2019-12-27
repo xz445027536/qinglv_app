@@ -3,7 +3,7 @@
     <router-link v-show='isShow' class="header-goback iconfont icon-fanhui" to="/">
     </router-link>
     <div class="header-fixed" v-show='!isShow' :style="styleObj">
-        <router-link class='iconfont icon-fanhui header-back' tag="i" to="/"></router-link>
+      <router-link class='iconfont icon-fanhui header-back' tag="i" to="/"></router-link>
       <div class="header-title">{{sightName}}</div>
     </div>
   </div>
