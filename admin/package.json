@@ -14,7 +14,7 @@
     "deploy:sit": "cross-env NODE_ENV=sitEnvironment env_config=sit node build/build.js && node build/deploy.js -u http://appdeploy:sf123456@10.203.85.104:22/app/nginx/html -l /dist && node build/deploy.js -u http://appdeploy:sf123456@10.203.85.94:22/app/nginx/html -l /dist"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "echarts": "^4.1.0",
     "element-ui": "2.4.6",
